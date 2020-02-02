@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	width: 100%;
+	margin: 0px;
+	padding: 8px;
+}
+
+h1 {
+	text-align: center;
+	border: thin solid black;
+	padding: 8px;
+	background-color: lightgreen;
+}
+
+.book-list-header {
+	color: green;
+}
+
+.index-books {
+	font-weight: bold;
+}
+
+.main-actions a {
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.book_table {
+	width: 100%;
+	margin: auto;
+	border: solid thin black;
+}
+
+td:hover {
+	color: lightgreen;
+}
+
+#container {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: lightgreen;
+}
