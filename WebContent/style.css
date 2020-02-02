@@ -54,3 +54,10 @@ a {
 a:hover {
 	color: lightgreen;
 }
+
+.modify-btn a {
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+}
+}

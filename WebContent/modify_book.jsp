@@ -97,7 +97,7 @@ function modify_book() {
 </tr>
 </tbody>
 </table>
-<p><a href="javascript:modify_book()">Modify Book</a></p>
+<p class="modify-btn"><a href="javascript:modify_book()">Modify Book</a></p>
 </form>
 </body>
 </html>
