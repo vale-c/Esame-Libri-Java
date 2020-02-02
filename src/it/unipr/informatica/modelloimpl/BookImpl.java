@@ -6,13 +6,13 @@ public class BookImpl implements Book {
 	private int id;
 	private String author;
 	private String title;
-	private int numOfPages;
+	private int pages;
 
-	public BookImpl(int id, String author, String title, int numOfPages) {
+	public BookImpl(int id, String author, String title, int pages) {
 		this.id = id;
 		this.author = author;
 		this.title = title;
-		this.numOfPages = numOfPages;
+		this.pages = pages;
 	}
 	  
 	public int getId() {
@@ -28,6 +28,6 @@ public class BookImpl implements Book {
 	}
 	
 	public int getNumOfPages() {
-		return numOfPages;
+		return pages;
 	}
 }

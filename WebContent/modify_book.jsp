@@ -36,15 +36,19 @@ function modify_book() {
 	
 	var s = node.value;
 	
-	if(s.length == 0 || s.length > 5000) {
-		alert("Invalid length provided");
+	if(!isNumeric(s)) {
+		alert("pages has got to be a number.");
 		
 		return;
 	}
-
+	
 	node = document.getElementById("form");
 	
 	node.submit();
+}
+
+var isNumeric = function(num){
+    return (typeof(num) === 'number' || typeof(num) === "string" && num.trim() !== '') && !isNaN(num);  
 }
 </script>
 </head>
@@ -59,7 +63,8 @@ function modify_book() {
 	String title;
 	
 	if(book == null) {
-		id = pages = 0;
+		id = 0;
+		pages = 0;
 		
 		title = author = "";
 		
@@ -93,7 +98,7 @@ function modify_book() {
 </tr>
 <tr>
 <td>Number Of Pages:</td>
-<td><input id="pages" name="pages" type="number" value="<%= pages %>" /></td>
+<td><input id="pages" name="pages" type="text" value="<%= pages %>" /></td>
 </tr>
 </tbody>
 </table>

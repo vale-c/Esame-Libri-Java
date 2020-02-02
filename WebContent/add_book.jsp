@@ -28,11 +28,11 @@
 				</tr>
 				<tr>
 					<td>Number of Pages:</td>
-					<td><input id="pages" name="pages" type="number" value="" /></td>
+					<td><input id="pages" name="pages" type="text" value="" /></td>
 				</tr>
 			</tbody>
 		</table>
-	  <button type ="button">
+	  <button type="button">
 	  	<a href="javascript:add_book()">Add book</a>
 	  </button>
 	</form>
@@ -44,7 +44,7 @@ function add_book() {
 	
 	var s = node.value;
 	
-	if(s.length == 0 || s.length > 50) {
+	if(s.length == 0 || s.length > 250) {
 		alert("Invalid Author Provided");
 		
 		return;
@@ -54,8 +54,8 @@ function add_book() {
 	
 	var s = node.value;
 	
-	if(s.length == 0 || s.length > 50) {
-		alert("Invalid Book Title provided");
+	if(s.length == 0 || s.length > 250) {
+		alert("Invalid Title provided");
 		
 		return;
 	}
@@ -64,15 +64,20 @@ function add_book() {
 	
 	var s = node.value;
 	
-	if(s.length == 0 || s.length > 5000) {
-		alert("Invalid length provided");
+	if(!isNumeric(s)) {
+		alert("pages has got to be a number.");
 		
 		return;
 	}
+	
 
 	node = document.getElementById("form");
 	
 	node.submit();
+}
+
+var isNumeric = function(num){
+    return (typeof(num) === 'number' || typeof(num) === "string" && num.trim() !== '') && !isNaN(num);  
 }
 </script>
 </body>
